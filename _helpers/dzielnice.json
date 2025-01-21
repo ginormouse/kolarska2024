@@ -1,0 +1,92 @@
+{
+    "Dzielnica I": {
+        "kolarska": 1278,
+        "wszystkie": 13862,
+        "percent": 9.22
+    },
+    "Dzielnica II": {
+        "kolarska": 1265,
+        "wszystkie": 14043,
+        "percent": 9.01
+    },
+    "Dzielnica III": {
+        "kolarska": 1208,
+        "wszystkie": 19872,
+        "percent": 6.08
+    },
+    "Dzielnica IV": {
+        "kolarska": 2157,
+        "wszystkie": 31389,
+        "percent": 6.87
+    },
+    "Dzielnica V": {
+        "kolarska": 1672,
+        "wszystkie": 15633,
+        "percent": 10.7
+    },
+    "Dzielnica VI": {
+        "kolarska": 884,
+        "wszystkie": 11440,
+        "percent": 7.73
+    },
+    "Dzielnica VII": {
+        "kolarska": 629,
+        "wszystkie": 9644,
+        "percent": 6.52
+    },
+    "Dzielnica VIII": {
+        "kolarska": 2075,
+        "wszystkie": 26853,
+        "percent": 7.73
+    },
+    "Dzielnica IX": {
+        "kolarska": 383,
+        "wszystkie": 6645,
+        "percent": 5.76
+    },
+    "Dzielnica X": {
+        "kolarska": 442,
+        "wszystkie": 11465,
+        "percent": 3.86
+    },
+    "Dzielnica XI": {
+        "kolarska": 1092,
+        "wszystkie": 22119,
+        "percent": 4.94
+    },
+    "Dzielnica XII": {
+        "kolarska": 1013,
+        "wszystkie": 23831,
+        "percent": 4.25
+    },
+    "Dzielnica XIII": {
+        "kolarska": 1730,
+        "wszystkie": 17614,
+        "percent": 9.82
+    },
+    "Dzielnica XIV": {
+        "kolarska": 739,
+        "wszystkie": 13073,
+        "percent": 5.65
+    },
+    "Dzielnica XV": {
+        "kolarska": 683,
+        "wszystkie": 19760,
+        "percent": 3.46
+    },
+    "Dzielnica XVI": {
+        "kolarska": 497,
+        "wszystkie": 13810,
+        "percent": 3.6
+    },
+    "Dzielnica XVIII": {
+        "kolarska": 796,
+        "wszystkie": 17109,
+        "percent": 4.65
+    },
+    "Dzielnica XVII": {
+        "kolarska": 167,
+        "wszystkie": 6490,
+        "percent": 2.57
+    }
+}

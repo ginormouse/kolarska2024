@@ -79,35 +79,23 @@
                         <td>' + (feature.properties['Krakow_sie'] !== null ? autolinker.link(feature.properties['Krakow_sie'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Dostępność dla OzN</th>\
-                        <td>' + (feature.properties['OzN'] !== null ? autolinker.link(feature.properties['OzN'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Proc. gł. na Darię</th>\
+                        <th scope="row">Procent na Kolarską</th>\
                         <td>' + (feature.properties['proc_dar'] !== null ? autolinker.link(feature.properties['proc_dar'].toLocaleString()) : '') + '%</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">L. gł. na Darię</th>\
+                        <th scope="row">Głosów na Kolarską</th>\
                         <td>' + (feature.properties['gl_dar'] !== null ? autolinker.link(feature.properties['gl_dar'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Wszystkie gł. ważne</th>\
-                        <td>' + (feature.properties['Krakow_glo'] !== null ? autolinker.link(feature.properties['Krakow_glo'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Wielkość obw. (l. ludzi)</th>\
+                        <th scope="row">Liczba głosów ważnych</th>\
                         <td>' + (feature.properties['licz_wyb'] !== null ? autolinker.link(feature.properties['licz_wyb'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Frekwencja w obw.</th>\
-                        <td>' + (feature.properties['frek'] !== null ? autolinker.link(feature.properties['frek'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
         function style_Daria_Krakow_1_0(feature) {
-            if (feature.properties['proc_dar'] >= 0.299000 && feature.properties['proc_dar'] <= 1.143363 ) {
+            if (feature.properties['proc_dar'] >= 0 && feature.properties['proc_dar'] <= 3 ) {
                 return {
                 pane: 'pane_Daria_Krakow_1',
                 opacity: 1,
@@ -122,7 +110,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['proc_dar'] >= 1.143363 && feature.properties['proc_dar'] <= 1.885564 ) {
+            if (feature.properties['proc_dar'] > 3 && feature.properties['proc_dar'] <= 5 ) {
                 return {
                 pane: 'pane_Daria_Krakow_1',
                 opacity: 1,
@@ -137,7 +125,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['proc_dar'] >= 1.885564 && feature.properties['proc_dar'] <= 2.627766 ) {
+            if (feature.properties['proc_dar'] > 5 && feature.properties['proc_dar'] <= 7 ) {
                 return {
                 pane: 'pane_Daria_Krakow_1',
                 opacity: 1,
@@ -152,7 +140,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['proc_dar'] >= 2.627766 && feature.properties['proc_dar'] <= 3.369968 ) {
+            if (feature.properties['proc_dar'] > 7 && feature.properties['proc_dar'] <= 9 ) {
                 return {
                 pane: 'pane_Daria_Krakow_1',
                 opacity: 1,
@@ -167,7 +155,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['proc_dar'] >= 3.369968 && feature.properties['proc_dar'] <= 4.112170 ) {
+            if (feature.properties['proc_dar'] > 9 && feature.properties['proc_dar'] <= 11 ) {
                 return {
                 pane: 'pane_Daria_Krakow_1',
                 opacity: 1,
@@ -182,7 +170,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['proc_dar'] >= 4.112170 && feature.properties['proc_dar'] <= 4.854371 ) {
+            if (feature.properties['proc_dar'] > 11 && feature.properties['proc_dar'] <= 13 ) {
                 return {
                 pane: 'pane_Daria_Krakow_1',
                 opacity: 1,
@@ -197,7 +185,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['proc_dar'] >= 4.854371 && feature.properties['proc_dar'] <= 5.596573 ) {
+            if (feature.properties['proc_dar'] > 13 && feature.properties['proc_dar'] <= 15 ) {
                 return {
                 pane: 'pane_Daria_Krakow_1',
                 opacity: 1,
@@ -212,7 +200,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['proc_dar'] >= 5.596573 && feature.properties['proc_dar'] <= 8.923000 ) {
+            if (feature.properties['proc_dar'] > 15 && feature.properties['proc_dar'] < 17 ) {
                 return {
                 pane: 'pane_Daria_Krakow_1',
                 opacity: 1,
@@ -249,31 +237,23 @@
                         <td>' + (feature.properties['official_name'] !== null ? autolinker.link(feature.properties['official_name'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Gł. na Darię</th>\
+                        <th scope="row">Głosy na Kolarską</th>\
                         <td>' + (feature.properties['gl_daria'] !== null ? autolinker.link(feature.properties['gl_daria'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Proc. gł. na Darię</th>\
+                        <th scope="row">Procent na Kolarską</th>\
                         <td>' + (feature.properties['proc_daria'] !== null ? autolinker.link(feature.properties['proc_daria'].toLocaleString()) : '') + '%</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Wszystkie gł. ważne</th>\
                         <td>' + (feature.properties['gl_wazne'] !== null ? autolinker.link(feature.properties['gl_wazne'].toLocaleString()) : '') + '</td>\
                     </tr>\
-                    <tr>\
-                        <th scope="row">L. uprawnionych</th>\
-                        <td>' + (feature.properties['l_wyb'] !== null ? autolinker.link(feature.properties['l_wyb'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Frekwencja</th>\
-                        <td>' + (feature.properties['frekwencja'] !== null ? autolinker.link(feature.properties['frekwencja'].toLocaleString()) : '') + '%</td>\
-                    </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
         function style_Wyniki_dzielnice_2_0(feature) {
-            if (feature.properties['proc_daria'] >= 1.860000 && feature.properties['proc_daria'] <= 2.000000 ) {
+            if (feature.properties['proc_daria'] >= 0 && feature.properties['proc_daria'] <= 3 ) {
                 return {
                 pane: 'pane_Wyniki_dzielnice_2',
                 opacity: 1,
@@ -288,7 +268,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['proc_daria'] >= 2.000000 && feature.properties['proc_daria'] <= 3.000000 ) {
+            if (feature.properties['proc_daria'] > 3 && feature.properties['proc_daria'] <= 5 ) {
                 return {
                 pane: 'pane_Wyniki_dzielnice_2',
                 opacity: 1,
@@ -303,7 +283,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['proc_daria'] >= 3.000000 && feature.properties['proc_daria'] <= 4.000000 ) {
+            if (feature.properties['proc_daria'] > 5 && feature.properties['proc_daria'] <= 7 ) {
                 return {
                 pane: 'pane_Wyniki_dzielnice_2',
                 opacity: 1,
@@ -318,7 +298,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['proc_daria'] >= 4.000000 && feature.properties['proc_daria'] <= 5.000000 ) {
+            if (feature.properties['proc_daria'] > 7 && feature.properties['proc_daria'] <= 9 ) {
                 return {
                 pane: 'pane_Wyniki_dzielnice_2',
                 opacity: 1,
@@ -333,7 +313,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['proc_daria'] >= 5.000000 && feature.properties['proc_daria'] <= 5.190000 ) {
+            if (feature.properties['proc_daria'] >9 && feature.properties['proc_daria'] <= 11 ) {
                 return {
                 pane: 'pane_Wyniki_dzielnice_2',
                 opacity: 1,
@@ -413,7 +393,7 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/Granicedzielnic_3.png" /> Granice dzielnic': layer_Granicedzielnic_3,'<b>Wyniki w dzielnicach</b><br /><table><tr><td style="text-align: center;"><img src="legend/Wyniki_dzielnice_2_18620.png" /></td><td>1,86 - 2%</td></tr><tr><td style="text-align: center;"><img src="legend/Wyniki_dzielnice_2_231.png" /></td><td>2 - 3%</td></tr><tr><td style="text-align: center;"><img src="legend/Wyniki_dzielnice_2_342.png" /></td><td>3 - 4%</td></tr><tr><td style="text-align: center;"><img src="legend/Wyniki_dzielnice_2_453.png" /></td><td>4 - 5%</td></tr><tr><td style="text-align: center;"><img src="legend/Wyniki_dzielnice_2_55194.png" /></td><td>5 - 5,19%</td></tr></table>': layer_Wyniki_dzielnice_2,'<b>Wyniki w obwodach</b><br /><table><tr><td style="text-align: center;"><img src="legend/Daria_Krakow_1_029114150SD0.png" /></td><td>0,29 - 1,14% (< -1,50 SD)</td></tr><tr><td style="text-align: center;"><img src="legend/Daria_Krakow_1_114189150100SD1.png" /></td><td>1,14 - 1,89% (-1,50 - -1,00 SD)</td></tr><tr><td style="text-align: center;"><img src="legend/Daria_Krakow_1_189263100050SD2.png" /></td><td>1,89 - 2,63% (-1,00 - -0,50 SD)</td></tr><tr><td style="text-align: center;"><img src="legend/Daria_Krakow_1_263337050000SD3.png" /></td><td>2,63 - 3,37% (-0,50 - 0,00 SD)</td></tr><tr><td style="text-align: center;"><img src="legend/Daria_Krakow_1_337411000050SD4.png" /></td><td>3,37 - 4,11% (0,00 - 0,50 SD)</td></tr><tr><td style="text-align: center;"><img src="legend/Daria_Krakow_1_411485050100SD5.png" /></td><td>4,11 - 4,85% (0,50 - 1,00 SD)</td></tr><tr><td style="text-align: center;"><img src="legend/Daria_Krakow_1_485560100150SD6.png" /></td><td>4,85 - 5,60% (1,00 - 1,50 SD)</td></tr><tr><td style="text-align: center;"><img src="legend/Daria_Krakow_1_560892150SD7.png" /></td><td>5,60 - 8,92% (≥  1,50 SD)</td></tr></table>': layer_Daria_Krakow_1,"OpenStreetMap": layer_OpenStreetMap_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/Granicedzielnic_3.png" /> Granice dzielnic': layer_Granicedzielnic_3,'<b>Wyniki w dzielnicach</b><br /><table><tr><td style="text-align: center;"><img src="legend/Wyniki_dzielnice_2_18620.png" /></td><td>0-3%</td></tr><tr><td style="text-align: center;"><img src="legend/Wyniki_dzielnice_2_231.png" /></td><td>3-5%</td></tr><tr><td style="text-align: center;"><img src="legend/Wyniki_dzielnice_2_342.png" /></td><td>5-7%</td></tr><tr><td style="text-align: center;"><img src="legend/Wyniki_dzielnice_2_453.png" /></td><td>7-9%</td></tr><tr><td style="text-align: center;"><img src="legend/Wyniki_dzielnice_2_55194.png" /></td><td>9-11%</td></tr></table>': layer_Wyniki_dzielnice_2,'<b>Wyniki w obwodach</b><br /><table><tr><td style="text-align: center;"><img src="legend/Daria_Krakow_1_029114150SD0.png" /></td><td>0-3%</td></tr><tr><td style="text-align: center;"><img src="legend/Daria_Krakow_1_114189150100SD1.png" /></td><td>3-5%</td></tr><tr><td style="text-align: center;"><img src="legend/Daria_Krakow_1_189263100050SD2.png" /></td><td>5-7%</td></tr><tr><td style="text-align: center;"><img src="legend/Daria_Krakow_1_263337050000SD3.png" /></td><td>7-9%</td></tr><tr><td style="text-align: center;"><img src="legend/Daria_Krakow_1_337411000050SD4.png" /></td><td>9-11%</td></tr><tr><td style="text-align: center;"><img src="legend/Daria_Krakow_1_411485050100SD5.png" /></td><td>11-13%</td></tr><tr><td style="text-align: center;"><img src="legend/Daria_Krakow_1_485560100150SD6.png" /></td><td>13-15%</td></tr><tr><td style="text-align: center;"><img src="legend/Daria_Krakow_1_560892150SD7.png" /></td><td>15-17%</td></tr></table>': layer_Daria_Krakow_1,"OpenStreetMap": layer_OpenStreetMap_0,},{collapsed:false}).addTo(map);
         map.on("zoomend", function(){
 
                 if (map.hasLayer(layer_Daria_Krakow_1)) {
@@ -503,7 +483,7 @@
         document.getElementById("all").appendChild(col1);
         document.getElementById("all").appendChild(col2);
         col1.appendChild(mapDiv)
-        var Filters = {"gl_dar": "int","licz_wyb": "int","proc_dar": "real","frek": "real","Dzielnica": "str","OzN": "str"};
+        var Filters = {"gl_dar": "int","licz_wyb": "int","proc_dar": "real","Dzielnica": "str"};
         function filterFunc() {
           map.eachLayer(function(lyr){
           if ("options" in lyr && "dataVar" in lyr["options"]){
@@ -600,7 +580,7 @@
             div_gl_dar.className = "slider";
             document.getElementById("menu").appendChild(div_gl_dar);
             var lab_gl_dar = document.createElement('div');
-            lab_gl_dar.innerHTML  = 'Liczba gł. na Darię: <span id="val_gl_dar"></span>';
+            lab_gl_dar.innerHTML  = 'Liczba gł. na Kolarską: <span id="val_gl_dar"></span>';
             lab_gl_dar.className = 'filterlabel';
             document.getElementById("menu").appendChild(lab_gl_dar);
             var reset_gl_dar = document.createElement('div');
@@ -614,14 +594,14 @@
             var sel_gl_dar = document.getElementById('div_gl_dar');
             noUiSlider.create(sel_gl_dar, {
                 connect: true,
-                start: [1, 113],
+                start: [0, 200],
                 step: 1,
                 format: wNumb({
                     decimals: 0,
                     }),
                 range: {
-                min: 1,
-                max: 113
+                min: 0,
+                max: 200
                 }
             });
             sel_gl_dar.noUiSlider.on('update', function (values) {
@@ -640,7 +620,7 @@
             div_proc_dar.className = "slider";
             document.getElementById("menu").appendChild(div_proc_dar);
             var lab_proc_dar = document.createElement('div');
-            lab_proc_dar.innerHTML  = 'Procent gł. na Darię: <span id="val_proc_dar"></span>%';
+            lab_proc_dar.innerHTML  = 'Procent gł. na Kolarską: <span id="val_proc_dar"></span>%';
             lab_proc_dar.className = 'filterlabel';
             document.getElementById("menu").appendChild(lab_proc_dar);
             var reset_proc_dar = document.createElement('div');
@@ -654,10 +634,10 @@
             var sel_proc_dar = document.getElementById('div_proc_dar');
             noUiSlider.create(sel_proc_dar, {
                 connect: true,
-                start: [0.3, 8.92],
+                start: [0.0, 16.26],
                 range: {
-                min: 0.3,
-                max: 8.92
+                min: 0.0,
+                max: 16.26
                 }
             });
             sel_proc_dar.noUiSlider.on('update', function (values) {
@@ -672,7 +652,7 @@
             div_licz_wyb.className = "slider";
             document.getElementById("menu").appendChild(div_licz_wyb);
             var lab_licz_wyb = document.createElement('div');
-            lab_licz_wyb.innerHTML  = 'Wielkość obwodu (l. upr.): <span id="val_licz_wyb"></span>';
+            lab_licz_wyb.innerHTML  = 'Liczba głosów ważnych w obwodzie: <span id="val_licz_wyb"></span>';
             lab_licz_wyb.className = 'filterlabel';
             document.getElementById("menu").appendChild(lab_licz_wyb);
             var reset_licz_wyb = document.createElement('div');
@@ -686,14 +666,14 @@
             var sel_licz_wyb = document.getElementById('div_licz_wyb');
             noUiSlider.create(sel_licz_wyb, {
                 connect: true,
-                start: [282, 2566],
+                start: [0, 1500],
                 step: 1,
                 format: wNumb({
                     decimals: 0,
                     }),
                 range: {
-                min: 282,
-                max: 2566
+                min: 0,
+                max: 1500
                 }
             });
             sel_licz_wyb.noUiSlider.on('update', function (values) {
@@ -707,36 +687,6 @@
             });
             document.getElementById("menu").appendChild(
                 document.createElement("div"));
-            var div_frek = document.createElement("div");
-            div_frek.id = "div_frek";
-            div_frek.className = "slider";
-            document.getElementById("menu").appendChild(div_frek);
-            var lab_frek = document.createElement('div');
-            lab_frek.innerHTML  = 'Frekwencja: <span id="val_frek"></span>';
-            lab_frek.className = 'filterlabel';
-            document.getElementById("menu").appendChild(lab_frek);
-            var reset_frek = document.createElement('div');
-            reset_frek.innerHTML = 'clear filter';
-            reset_frek.className = 'filterlabel';
-            lab_frek.className = 'filterlabel';
-            reset_frek.onclick = function() {
-                sel_frek.noUiSlider.reset();
-            };
-            document.getElementById("menu").appendChild(reset_frek);
-            var sel_frek = document.getElementById('div_frek');
-            noUiSlider.create(sel_frek, {
-                connect: true,
-                start: [54.59, 94.11],
-                range: {
-                min: 54.59,
-                max: 94.11
-                }
-            });
-            sel_frek.noUiSlider.on('update', function (values) {
-            val_frek = document.getElementById('val_frek');
-            val_frek.innerHTML = values.join(' - ');
-                filterFunc()
-            });
             document.getElementById("menu").appendChild(
                 document.createElement("div"));
             var div_Dzielnica = document.createElement('div');
@@ -786,35 +736,6 @@
             div_Dzielnica.appendChild(reset_Dzielnica);
             document.getElementById("menu").appendChild(
                 document.createElement("div"));
-            var div_OzN = document.createElement('div');
-            div_OzN.id = "div_OzN";
-            div_OzN.className= "filterselect";
-            document.getElementById("menu").appendChild(div_OzN);
-            sel_OzN = document.createElement('select');
-            sel_OzN.multiple = true;
-            sel_OzN.size = 2;
-            sel_OzN.id = "sel_OzN";
-            var OzN_options_str = "<option value='' unselected></option>";
-            sel_OzN.onchange = function(){filterFunc()};
-            OzN_options_str  += '<option value="nie">nie</option>';
-            OzN_options_str  += '<option value="tak">tak</option>';
-            sel_OzN.innerHTML = OzN_options_str;
-            div_OzN.appendChild(sel_OzN);
-            var lab_OzN = document.createElement('div');
-            lab_OzN.innerHTML = 'Dostępność lokalu wyb. dla OzN';
-            lab_OzN.className = 'filterlabel';
-            div_OzN.appendChild(lab_OzN);
-            var reset_OzN = document.createElement('div');
-            reset_OzN.innerHTML = 'clear filter';
-            reset_OzN.className = 'filterlabel';
-            reset_OzN.onclick = function() {
-                var options = document.getElementById("sel_OzN").options;
-                for (var i=0; i < options.length; i++) {
-                    options[i].selected = false;
-                }
-                filterFunc();
-            };
-            div_OzN.appendChild(reset_OzN);
         resetLabels([layer_Daria_Krakow_1,layer_Granicedzielnic_3]);
         map.on("zoomend", function(){
             resetLabels([layer_Daria_Krakow_1,layer_Granicedzielnic_3]);
